@@ -68,6 +68,24 @@ g++ -O3 -Wall -shared -std=c++14 -fPIC \
     -o example$(python3-config --extension-suffix)
 ```
 
+## Quick Start
+
+The fastest way to get started:
+
+```bash
+# 1. Install dependencies
+pip install pybind11
+
+# 2. Build the extension
+./build.sh
+
+# 3. Test it
+python3 test_example.py
+
+# 4. Try the demo
+python3 demo.py
+```
+
 ## Testing
 
 Run the test script to verify everything works:

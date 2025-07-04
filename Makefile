@@ -24,7 +24,11 @@ all: $(TARGET)
 
 # Build the extension module
 $(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) $(PYTHON_INCLUDE) $< -o $@
+	@echo "Attempting direct compilation..."
+	@$(CXX) $(CXXFLAGS) $(PYTHON_INCLUDE) $< -o $@ 2>/dev/null || \
+	(echo "Direct compilation failed, using setuptools..." && \
+	$(PYTHON) setup.py build_ext --inplace && \
+	find build -name "example*" -type f \( -name "*.so" -o -name "*.dylib" -o -name "*.pyd" \) -exec cp {} . \;)
 
 # Clean build artifacts
 clean:
@@ -44,6 +48,10 @@ dev-install: install
 # Build using setuptools
 setup-build:
 	$(PYTHON) setup.py build_ext --inplace
+	@echo "Copying extension from build directory..."
+	@find build -name "example*.so" -exec cp {} . \; 2>/dev/null || true
+	@find build -name "example*.dylib" -exec cp {} . \; 2>/dev/null || true
+	@find build -name "example*.pyd" -exec cp {} . \; 2>/dev/null || true
 
 # Test the module
 test: $(TARGET)
