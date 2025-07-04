@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "pybind11>=2.10.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pybind_example"
+version = "0.1.0"
+description = "A minimal pybind11 example"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pybind11>=2.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black",
+    "isort",
+    "autopep8",
+    "autoflake",
+]
+
+[tool.black]
+line-length = 120
+target-version = ["py311","py312"]
+
+[tool.autopep8]
+max-line-length = 120
+ignore = ["E501"]
+in-place = true
+recursive = true
+aggressive = 1
+
+[tool.autoflake]
+remove-all-unused-imports = true
+remove-unused-variables = true
+ignore-init-module-imports = true
+expand-star-imports = true
+in-place = true
+exclude = ["__init__.py"]
+
+
+[tool.isort]
+profile = "black"
+line_length = 120
+py_version = ["py311","py312"]
+known_first_party = ""
+use_parentheses = true
+atomic= true
+verbose = true
+skip_gitignore = true
+skip = ["__init__.py"]
+combine_as_imports = true
+
+[tool.pyright]
+include = ["/Users/Akseldkw/coding/kretsinger/"]
