@@ -19,7 +19,7 @@ ext_modules = [
 setup(
     name="pybind_example",
     version="0.1.0",
-    author="Your Name",
+    author="Aksel Kretsinger-Walters",
     author_email="akseldkw@example.com",
     description="A minimal pybind11 example",
     long_description="A simple example demonstrating pybind11 functionality",

@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/local/include",
-                "/Users/Akseldkw/micromamba/envs/kret_312/include"
+                "/Users/Akseldkw/micromamba/envs/kret_312/include",
+                "/Users/Akseldkw/micromamba/envs/kret_312/include/python3.12"
             ],
             "defines": [],
             "macFrameworkPath": [
