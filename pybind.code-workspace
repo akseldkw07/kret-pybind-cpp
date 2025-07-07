@@ -7,5 +7,7 @@
 			"path": "../kretsinger"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.defaultInterpreterPath": "~/micromamba/envs/kret_312/bin/python"
+	}
 }

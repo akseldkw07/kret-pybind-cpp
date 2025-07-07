@@ -20,7 +20,7 @@ setup(
     name="pybind_example",
     version="0.1.0",
     author="Your Name",
-    author_email="your.email@example.com",
+    author_email="akseldkw@example.com",
     description="A minimal pybind11 example",
     long_description="A simple example demonstrating pybind11 functionality",
     ext_modules=ext_modules,

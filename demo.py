@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env ~/micromamba/envs/kret_312/bin/python
 """
 Demo script showing all the features of the pybind11 example module.
 """
