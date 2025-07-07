@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # build.sh - Simple reliable build script for the pybind11 example
 

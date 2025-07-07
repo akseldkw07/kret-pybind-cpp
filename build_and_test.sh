@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # build_and_test.sh - Simple script to build and test the pybind11 example
 

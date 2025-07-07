@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env ~/micromamba/envs/kret_312/bin/python
 """
 Test script for the pybind11 example module.
 This script demonstrates how to use the compiled C++ extension.
